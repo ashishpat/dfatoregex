@@ -1,0 +1,69 @@
+﻿
+<!doctype html>
+<html>
+<head>
+<title>DFA to Regular Expresssion</title>
+
+  <link rel="stylesheet" href="dfatoregex/style.css" />
+<script src="dfatoregex/jquery-2.1.1.min.js"></script>
+
+<script src="dfatoregex/go.js"></script>
+<script src="dfatoregex/state_go.js"></script>
+<script src="dfatoregex/dfatoregex.js"></script>
+
+</head>
+
+<body onload="init()">
+
+<header>
+    <h1>Deterministic Finite Automaton to Regular Expression</h1>
+</header>
+
+<section style="background: whitesmoke;">
+    <div id="myDiagram"></div>
+</section>
+
+<section id="states"></section>
+
+<section id="go_input" style="display: block;">
+<button class="input_button" id="SaveButton" onclick="save(); create_att();">Submit</button>
+<button class="input_button" onclick="load(); ">Load</button>
+</section>
+
+<div id="user_input"></div>
+
+<section id="model">
+
+
+  Diagram Model saved in JSON format:
+  <br />
+  <textarea id="mySavedModel" style="width:100%;height:300px">
+  { "class": "go.GraphLinksModel",
+  "nodeKeyProperty": "id",
+  "nodeDataArray": [ {"text":"Start", "id":-1, "loc":"139 201.125"} ],
+  "linkDataArray": [  ]}
+</textarea>
+</section>
+
+<section id="instruction" style="display: none;">
+<h3>Instructions</h3>
+<p>
+<strong>*Note: The input state chart is still underdevelopment, so only create valid DFA.
+<br><br>
+Current Restrictions:</strong>
+</p>
+<ul>
+<li>Only use 2 alphabets</li>
+<li>Define a starting state</li>
+</ul>
+   
+<h3>How to use:</h3>
+<ul>
+<li>Use the above canvas for input</li>
+<li>Double-click the canvas to create a new node</li>
+<li>Click and drag your mouse to link nodes, or use the + sign to create a new node</li>
+</ul>
+</section>
+
+</body>
+</html>
